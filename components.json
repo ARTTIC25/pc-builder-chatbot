@@ -1,0 +1,42 @@
+{
+    "cpus":[{
+        "name": "Ryzen 5 5600",
+        "price": 9500,
+        "socket": "AM4"
+    },
+    {
+        "name": "Ryzen 7 5700X",
+        "price": 16000,
+        "socket": "AM4"
+
+    },{
+        "name": "Intel i5-12400F",
+        "price": 12000,
+        "socket": "LGA1700"
+    }
+    
+    ],
+    "gpus":[{
+        "name": "RX 6600",
+        "price": 18000
+    },
+    {
+      "name": "RTX 4060",
+      "price": 28000
+    },
+    {
+      "name": "RX 7600",
+      "price": 25000
+    }],
+    "ram": [
+    {
+      "name": "16GB DDR4",
+      "price": 4000
+    },
+    {
+      "name": "32GB DDR4",
+      "price": 7500
+    }
+  ]
+
+}
