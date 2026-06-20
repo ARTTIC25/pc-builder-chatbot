@@ -1,5 +1,10 @@
+from recommendations import recommedn
 import json
 
-with open("components.json","r") as file:
-    components=json.load(file)
-print(components)
+budget=int(input("Enter the budget of ur requirement"))
+build= recommedn(budget)
+
+print("\nRecommended system is :")
+print("cpu:",build["cpu"])
+print("gpu:",build["gpu"])
+print("ram:",build["ram"])
