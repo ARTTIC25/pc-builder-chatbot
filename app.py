@@ -6,5 +6,5 @@ build= recommedn(budget)
 
 print("\nRecommended system is :")
 print("cpu:",build["cpu"])
-print("gpu:",build["gpu"])
+print("gpus:",build["gpus"])
 print("ram:",build["ram"])

@@ -1,19 +1,28 @@
+
+import json
+with open("components.json","r") as files:
+    components=json.load(files)
 def recommedn(budget):
+    ram =components["ram"][0]
     if budget <= 50000:
-        return{
-            "cpu": "Ryzen 5 5600",
-            "gpu": "RX 6600",
-            "ram": "16GB DDR4"
-        }
+            cpu = components["cpus"][0]
+            gpus = components["gpus"][0]
+        
     elif budget <=80000:
-        return{
-            "cpu": "Intel i5-12400F",
-            "gpu": "RX 7600",
-            "ram": "16GB DDR4"
-        }
+        
+            cpu = components["cpus"][2]
+            gpus = components["gpus"][2]
+        
     else:
-        return{
-            "cpu": "Ryzen 7 5700X",
-            "gpu": "RTX 4060",
-            "ram": "32GB DDR4"
-        }
+        
+            cpu = components["cpus"][1]
+            gpus = components["gpus"][1]
+        
+    return {
+          "cpu":cpu["name"],
+          "gpus":gpus["name"],
+          "ram":ram["name"]
+
+          
+    }
+        
