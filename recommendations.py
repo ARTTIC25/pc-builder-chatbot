@@ -1,6 +1,6 @@
 import json 
 with open("components.json","r") as files: components=json.load(files)
-def recommend(budget, purpose):
+def recommend(budget, purpose,pref_gpu):
     ram =components["ram"][0]
 
     if purpose == "gaming":
@@ -23,8 +23,13 @@ def recommend(budget, purpose):
         cpu = components["cpus"][0]
         gpus = components["gpus"][0]
 
+    if pref_gpu:
+        gpus_name=pref_gpu
+    else:
+        gpus_name=gpus["name"]
+
     return {
         "cpu": cpu["name"],
-        "gpus": gpus["name"],
+        "gpus": gpus_name,
         "ram":ram["name"]
     }
