@@ -1,5 +1,6 @@
-def compact(cpu,motherboard):
+def compact(cpu,motherboard,ram):
     if cpu["socket"]== motherboard["socket"]:
-        return True
+        if ram["ram_type"] == motherboard["ram_type"]:
+            return True
     else:
         False

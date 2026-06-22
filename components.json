@@ -31,12 +31,28 @@
     "ram": [
     {
       "name": "16GB DDR4",
-      "price": 4000
+      "price": 4000,
+      "ram_type":"DDR4"
     },
     {
-      "name": "32GB DDR4",
-      "price": 7500
+      "name": "32GB DDR5",
+      "price": 7500,
+      "ram_type":"DDR5"
     }
-  ]
+  ],
+  "motherboards": [
+    {
+        "name": "MSI B550M PRO",
+        "price": 8000,
+        "socket": "AM4",
+        "ram_type":"DDR4"
+    },
+    {
+        "name": "Gigabyte H610M",
+        "price": 7000,
+        "socket": "LGA1700",
+        "ram_type":"DDR4"
+    }
+]
 
 }
