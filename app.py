@@ -11,14 +11,18 @@ if not numbers:
     print("bot: please provide a budget")
 pp=purpose(message)
 comp=detecter(message)
-print("detected purpose\n",pp)
+print("detected purpose:",pp)
 print("detected gpu by user:",comp)
 
 budget=int(numbers[0])
 build= recommend(budget,pp,comp)
+total_price=build["cpu"]["price"]+build["gpus"]["price"]+build["ram"]["price"]
 
 print("\nbot:")
-print("Loading......")
-print("cpu:",build["cpu"])
-print("gpus:",build["gpus"])
-print("ram:",build["ram"])
+print("Loading......\n")
+print("======Recommended System========")
+print(f"Cpu:{build["cpu"]["name"]}:-{build["cpu"]["price"]}")
+print(f"Gpus:{build["gpus"]["name"]}:-{build["gpus"]["price"]}")
+print(f"ram:{build["ram"]["name"]}:-{build["ram"]["price"]}\n")
+
+print("Total price:-",total_price)

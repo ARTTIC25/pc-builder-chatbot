@@ -24,12 +24,14 @@ def recommend(budget, purpose,pref_gpu):
         gpus = components["gpus"][0]
 
     if pref_gpu:
-        gpus_name=pref_gpu
+        for g in components["gpus"]:
+            if g["name"]==pref_gpu:
+                gpus=g
     else:
-        gpus_name=gpus["name"]
+        gpus=g
 
     return {
-        "cpu": cpu["name"],
-        "gpus": gpus_name,
-        "ram":ram["name"]
+        "cpu": cpu,
+        "gpus": gpus,
+        "ram":ram
     }
