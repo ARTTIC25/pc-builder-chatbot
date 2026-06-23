@@ -2,6 +2,7 @@ from recommendations import recommend
 from componet_detecter import detecter
 from intent import purpose
 from compatibiltiy_test import compact
+from flask import Flask,render_template
 import json
 import re
 
