@@ -27,9 +27,8 @@ def recommend(budget, purpose,pref_gpu):
         for g in components["gpus"]:
             if g["name"]==pref_gpu:
                 gpus=g
-    else:
-        gpus=g
     
+
     if cpu["socket"]=="AM4":
         motherboard=components["motherboards"][0]
     else:
