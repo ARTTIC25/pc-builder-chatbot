@@ -1,7 +1,7 @@
 body{
 
     margin:0;
-    background:#0f172a;
+    background:#000000;
     font-family:Arial;
 
 }
@@ -23,7 +23,7 @@ h1{
 
 #chatbox{
 
-    background:white;
+    background:rgb(31, 26, 26);
 
     height:500px;
 

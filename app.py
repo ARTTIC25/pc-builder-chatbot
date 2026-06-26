@@ -2,7 +2,7 @@ from recommendations import recommend
 from componet_detecter import detecter
 from intent import purpose
 from compatibiltiy_test import compact
-from flask import Flask,render_template,request
+from flask import Flask, render_template, request, jsonify
 import json
 import re
 
@@ -59,7 +59,16 @@ def chat():
 <b>Compatibility:</b> {"✅ Compatible" if compatible else "❌ Not Compatible"}
 """
 
-    return reply
+    return jsonify({
+
+    "cpu": build["cpu"]["name"],
+    "gpus": build["gpus"]["name"],
+    "ram": build["ram"]["name"],
+    "motherboard": build["motherboard"]["name"],
+    "total": total_price,
+    "compatible": compatible
+
+})
     
 if __name__=="__main__":
     app.run(debug=True)

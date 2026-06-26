@@ -12,7 +12,7 @@ function sendMessage() {
         body: "message=" + encodeURIComponent(message)
     })
 
-    .then(response => response.text())
+    .then(response => response.json())
 
     .then(data => {
 
@@ -26,8 +26,21 @@ function sendMessage() {
         `;
 
         chatbox.innerHTML += `
-        <div class="bot">
-        ${data}
+        <h3>Recommended Build</h3>
+
+            <p> CPU : ${data.cpu}</p>
+
+            <p> GPU : ${data.gpus}</p>
+
+            <p> RAM : ${data.ram}</p>
+
+            <p> Motherboard : ${data.motherboard}</p>
+
+            <p><strong>Total : ₹${data.total}</strong></p>
+
+            <p>
+            ${data.compatible ? " Compatible" : " Not Compatible"}
+            </p>
         </div>
         `;
 
