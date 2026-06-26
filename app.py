@@ -46,20 +46,21 @@ def chat():
     )
 
     reply = f"""
-CPU: {build['cpu']['name']}
+<b>CPU:</b> {build["cpu"]["name"]} - ₹{build["cpu"]["price"]}<br>
 
-GPU: {build['gpus']['name']}
+<b>GPU:</b> {build["gpus"]["name"]} - ₹{build["gpus"]["price"]}<br>
 
-RAM: {build['ram']['name']}
+<b>RAM:</b> {build["ram"]["name"]} - ₹{build["ram"]["price"]}<br>
 
-Motherboard: {build['motherboard']['name']}
+<b>Motherboard:</b> {build["motherboard"]["name"]} - ₹{build["motherboard"]["price"]}<br><br>
 
-Total Price: ₹{total_price}
+<b>Total Price:</b> ₹{total_price}<br><br>
 
-Compatibility: {"Compatible " if compatible else "Not Compatible "}
+<b>Compatibility:</b> {"✅ Compatible" if compatible else "❌ Not Compatible"}
 """
 
     return reply
+    
 if __name__=="__main__":
     app.run(debug=True)
 

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
         <title>PC builder chatbot</title>
     </head>
     <body>
 
-    <h1>PC Builder Chatbot</h1>
+<div class="container">
 
-    <div id="chatbox">
+    <h1> PC Builder Assistant</h1>
+
+    <div id="chatbox"></div>
+
+    <div class="input-area">
+
+        <input
+            id="message"
+            placeholder="Ask me to build your PC..."
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
 
     </div>
 
-    <input
-        id="message"
-        type="text"
-    >
+</div>
 
-    <button onclick="sendMessage()">
-        Send
-    </button>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>

@@ -19,11 +19,17 @@ function sendMessage() {
         let chatbox =
             document.getElementById("chatbox");
 
-        chatbox.innerHTML +=
-            `<p><b>You:</b> ${message}</p>`;
+        chatbox.innerHTML += `
+        <div class="user">
+        ${message}
+        </div>
+        `;
 
-        chatbox.innerHTML +=
-            `<p><b>Bot:</b> ${data}</p>`;
+        chatbox.innerHTML += `
+        <div class="bot">
+        ${data}
+        </div>
+        `;
 
         input.value = "";
     });
