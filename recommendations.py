@@ -1,5 +1,12 @@
 import json 
-with open("components.json","r") as files: components=json.load(files)
+
+def load_json(filename):
+    with open("filename","r") as file:
+        return json.load(file)
+cpus = load_json("data/cpus.json")
+gpus = load_json("data/gpus.json")
+motherboards = load_json("data/motherboards.json")
+rams = load_json("data/ram.json")
 def recommend(budget, purpose,pref_gpu):
     ram =components["ram"][0]
 
