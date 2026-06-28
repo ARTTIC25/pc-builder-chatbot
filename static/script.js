@@ -26,6 +26,7 @@ function sendMessage() {
         `;
 
         chatbox.innerHTML += `
+        <div class="bot">
         <h3>Recommended Build</h3>
 
             <p> CPU : ${data.cpu}</p>
