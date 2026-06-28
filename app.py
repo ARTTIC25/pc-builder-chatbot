@@ -18,7 +18,7 @@ def chat():
     numbers = re.findall(r"\d+", message)
 
     if not numbers:
-        return "Please provide a budget."
+        return jsonify({"error":"Please provide a budget."})
 
     budget = int(numbers[0])
 
